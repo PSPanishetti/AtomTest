@@ -11,4 +11,6 @@
     <color name="light_black">#494848</color>
     <color name="slate_grey">#636473</color>
     <color name="dark_purple">#241335</color>
+    <color name="colorAccent">#AE0D0D</color>
+    <color name="disabled_black">#D8D8D8</color>
 </resources>

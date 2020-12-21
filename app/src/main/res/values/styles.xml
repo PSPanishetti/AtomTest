@@ -26,6 +26,26 @@
         <item name="android:textColor">@color/title_text_color</item>
         <item name="android:textSize">28sp</item>
     </style>
-    <dimen name="_10dp">10dp</dimen>
-    <dimen name="_5dp">5dp</dimen>
+
+    <style name="SubTitleTextStyle" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/sen_extra_bold</item>
+        <item name="android:padding">@dimen/_5dp</item>
+        <item name="android:textColor">@color/title_text_color</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="fontFamily">@font/sen_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BodyText" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/sen_regular</item>
+            <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

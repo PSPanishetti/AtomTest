@@ -11,4 +11,10 @@
     <dimen name="_55dp">55dp</dimen>
     <dimen name="login_option_text_size">18sp</dimen>
     <dimen name="very_small_text_size">13sp</dimen>
+    <dimen name="navigation_icon_dimen">28dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_44dp">44dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="fab_size">48dp</dimen>
 </resources>
