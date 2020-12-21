@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/title_appearance"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/continue_with_google"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            motion:layout_constraintBottom_toTopOf="@id/continue_as_guest"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/continue_as_guest"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            motion:layout_constraintBottom_toTopOf="@id/terms_and_conditions_text"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/terms_and_conditions_text"
+            motion:layout_constraintEnd_toEndOf="@id/continue_as_guest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/continue_as_guest"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/title_text"
+            motion:layout_constraintEnd_toEndOf="@id/continue_as_guest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8dp"
+            motion:layout_constraintBottom_toTopOf="@+id/continue_with_google"
+            motion:layout_constraintStart_toStartOf="@id/continue_as_guest"
+            android:visibility="invisible" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/title_appearance">
+        <Constraint
+            android:id="@+id/continue_with_google"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            motion:layout_constraintBottom_toTopOf="@id/continue_as_guest"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/continue_as_guest"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            motion:layout_constraintBottom_toTopOf="@id/terms_and_conditions_text"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/title_text"
+            motion:layout_constraintEnd_toEndOf="@id/continue_as_guest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8dp"
+            motion:layout_constraintBottom_toTopOf="@+id/continue_with_google"
+            motion:layout_constraintStart_toStartOf="@id/continue_as_guest"
+            android:visibility="invisible" />
+    </ConstraintSet>
+</MotionScene>

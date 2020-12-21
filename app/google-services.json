@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "661595198613",
+    "project_id": "atoptest-f7cf1",
+    "storage_bucket": "atoptest-f7cf1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661595198613:android:1fd255c3cb2cdbe913379c",
+        "android_client_info": {
+          "package_name": "app.atom.praveen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "661595198613-ahcp9ltg25ne46qg1gam703s7casv118.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.atom.praveen",
+            "certificate_hash": "4f3a7fe0280ec82d20039ca3692d1c35a65edca4"
+          }
+        },
+        {
+          "client_id": "661595198613-ksrfbrl17sa2k26ai6gq0a2t847157uu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKJyOkJMwRmd8s1FgT0JikBfJgiZ8UtDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "661595198613-ksrfbrl17sa2k26ai6gq0a2t847157uu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

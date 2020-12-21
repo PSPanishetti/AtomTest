@@ -43,9 +43,11 @@
         android:layout_marginTop="@dimen/navigation_icon_dimen"
         android:layout_marginEnd="@dimen/navigation_icon_dimen"
         android:layout_marginStart="@dimen/_8dp"
+        android:focusable="true"
         android:hint="@string/name"
         android:theme="@style/EditTextStyle"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
+        android:inputType="textCapWords"
         android:layout_height="wrap_content"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

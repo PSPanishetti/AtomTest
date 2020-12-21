@@ -42,4 +42,36 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
 
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logout"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_margin="@dimen/_50dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/black"
+        android:text="Let's Try Logout"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/go_to_repo"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/_50dp"
+        android:layout_marginRight="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_10dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/black"
+        android:text="@string/show_me_code"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@+id/logout" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
