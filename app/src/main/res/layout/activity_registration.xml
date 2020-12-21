@@ -13,7 +13,7 @@
         android:id="@+id/back_button"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="@dimen/_16dp"
+        android:layout_marginStart="@dimen/_16dp"
         android:layout_height="@dimen/navigation_icon_dimen"/>
 
 
@@ -39,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/question_text"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingStart="@dimen/_20dp"
+        android:paddingEnd="0dp"
         android:maxLines="1"
         android:layout_marginTop="@dimen/navigation_icon_dimen"
         android:layout_marginEnd="@dimen/navigation_icon_dimen"
@@ -48,7 +49,8 @@
         android:theme="@style/EditTextStyle"
         android:textAllCaps="false"
         android:inputType="textCapWords"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

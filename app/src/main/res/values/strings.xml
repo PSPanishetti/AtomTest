@@ -6,4 +6,11 @@
     <string name="firebase_api_key">661595198613-ksrfbrl17sa2k26ai6gq0a2t847157uu.apps.googleusercontent.com</string>
     <string name="breath_in">Breath In, Breath Out</string>
     <string name="show_me_code">Show Me The Code</string>
+    <string name="home_welcome_title">A more mindful you</string>
+    <string name="home_subtitle">building your mediation experience</string>
+    <string name="logout"> try logout</string>
+    <string name="login_title_string">Make meditation a habit you love</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_as_guest">Continue as Guest</string>
+    <string name="loading">Loading....</string>
 </resources>

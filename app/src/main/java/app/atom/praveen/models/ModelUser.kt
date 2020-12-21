@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package app.atom.praveen.models
 
 import com.google.firebase.database.IgnoreExtraProperties

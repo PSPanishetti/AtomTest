@@ -13,10 +13,10 @@ import com.google.firebase.database.ValueEventListener
 
 object FirebaseDBHelper {
 
-    val db = FirebaseDatabase.getInstance()
-    val userBranchReference = db.getReference(Constants.USER_BRANCH_REFERENCE)
+    private val db = FirebaseDatabase.getInstance()
+    private val userBranchReference = db.getReference(Constants.USER_BRANCH_REFERENCE)
 
-  public fun getUserData(user: FirebaseUser?, userDetailsCallback: UserDetailsCallback){
+  fun getUserData(user: FirebaseUser?, userDetailsCallback: UserDetailsCallback){
 
       user?.uid?.let { userBranchReference.child(it).addListenerForSingleValueEvent(object :ValueEventListener{
           override fun onDataChange(snapshot: DataSnapshot) {
@@ -36,7 +36,7 @@ object FirebaseDBHelper {
       }) }
   }
 
-    public fun updaterUserData(firebaseUser: FirebaseUser,user: ModelUser, callback : UserUpdateCallback){
+    fun updaterUserData(firebaseUser: FirebaseUser,user: ModelUser, callback : UserUpdateCallback){
         userBranchReference.child(firebaseUser.uid).setValue(user).addOnSuccessListener {
             callback.onSuccess(user)
         }.addOnFailureListener {

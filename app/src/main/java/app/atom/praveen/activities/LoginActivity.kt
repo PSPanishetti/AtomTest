@@ -30,10 +30,10 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener{
     private val TAG="LoginActivity"
 
     private val RC_SIGN_IN: Int = 5050
-    lateinit var binding : ActivityLoginBinding
-    lateinit var googleSignInClient: GoogleSignInClient
-    lateinit var simpleLoadingDialog: SimpleLoadingDialog
-    lateinit var firebaseUser: FirebaseUser
+    private lateinit var binding : ActivityLoginBinding
+    private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var simpleLoadingDialog: SimpleLoadingDialog
+    private lateinit var firebaseUser: FirebaseUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +56,7 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener{
         })
 
         loginViewModel.getIsLoading()?.observe(this,{
-            Log.d(TAG,"We got something here " );
+            Log.d(TAG,"We got something here " )
             if(it.first) {
                 showLoading(it.second)
             }else{
@@ -124,7 +124,7 @@ class LoginActivity : AppCompatActivity() , View.OnClickListener{
     }
 
     private fun showLoading(message: String) {
-        Log.d(TAG,"ShowLoading : $message");
+        Log.d(TAG,"ShowLoading : $message")
         simpleLoadingDialog.show()
         simpleLoadingDialog.setMessage(message)
 

@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_8dp"
         android:gravity="center"
-        android:text="Make meditation a habit you love"
+        android:text="@string/login_title_string"
         app:layout_constraintBottom_toTopOf="@+id/continue_with_google"
         app:layout_constraintEnd_toEndOf="@id/continue_as_guest"
         app:layout_constraintStart_toStartOf="@id/continue_as_guest" />
@@ -56,7 +56,8 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
                 android:layout_weight="3"
-                android:src="@drawable/google_logo" />
+                android:src="@drawable/google_logo"
+                tools:ignore="ObsoleteLayoutParam" />
 
         </FrameLayout>
 
@@ -67,7 +68,7 @@
             android:layout_height="match_parent"
             android:layout_weight="7"
             android:gravity="start|center_vertical"
-            android:text="Continue with Google" />
+            android:text="@string/continue_with_google" />
 
     </LinearLayout>
 
@@ -106,7 +107,7 @@
             android:layout_height="match_parent"
             android:layout_weight="7"
             android:gravity="start|center_vertical"
-            android:text="Continue as Guest" />
+            android:text="@string/continue_as_guest" />
 
     </LinearLayout>
 

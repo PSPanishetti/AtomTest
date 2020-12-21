@@ -4,9 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 
-class SharedPrefsManager(val context: Context,
-                         private val sharedPreference: SharedPreferences=context.getSharedPreferences(Constants.SHARED_PREFS_FILE_NAME,Context.MODE_PRIVATE),
-                         private @SuppressLint("CommitPrefEdits") val editor : SharedPreferences.Editor= sharedPreference.edit())
+class SharedPrefsManager(
+    private val context: Context,
+    private val sharedPreference: SharedPreferences=context.getSharedPreferences(Constants.SHARED_PREFS_FILE_NAME,Context.MODE_PRIVATE),
+    @SuppressLint("CommitPrefEdits")  private val editor : SharedPreferences.Editor= sharedPreference.edit())
 {
 
     fun saveBooleanValue(key:String,value: Boolean){

@@ -1,6 +1,5 @@
 package app.atom.praveen.viewModels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,7 +19,7 @@ class LoginViewModel() : ViewModel() {
     private var isLoading : MutableLiveData<Pair<Boolean, String>> ? =null
     private var isErrorOccurred : MutableLiveData<Pair<Boolean, String>> ? = null
 
-    public fun initializeModel()
+    fun initializeModel()
     {
         if(modelUser==null){
 
@@ -60,21 +59,21 @@ class LoginViewModel() : ViewModel() {
         })
     }
 
-    public fun authenticateUserUsingFirebase(account : GoogleSignInAccount?) {
+    fun authenticateUserUsingFirebase(account : GoogleSignInAccount?) {
         isLoading?.value=(Pair(true,"Authenticating..."))
         account?.idToken?.let { googleSingInHelper?.firebaseAuthWithGoogle(it) }
     }
 
-    public fun getUserData() : LiveData<ModelUser>? {
-        return modelUser;
+    fun getUserData() : LiveData<ModelUser>? {
+        return modelUser
     }
 
-    public fun getIsLoading() : LiveData<Pair<Boolean, String>>? {
-        return isLoading;
+    fun getIsLoading() : LiveData<Pair<Boolean, String>>? {
+        return isLoading
     }
 
-    public fun getHasErrorOccurred() : LiveData<Pair<Boolean, String>>? {
-        return isErrorOccurred;
+    fun getHasErrorOccurred() : LiveData<Pair<Boolean, String>>? {
+        return isErrorOccurred
     }
 
 }

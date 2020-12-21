@@ -1,14 +1,15 @@
+@file:Suppress("UsePropertyAccessSyntax", "UsePropertyAccessSyntax", "UsePropertyAccessSyntax")
+
 package app.atom.praveen.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import app.atom.praveen.R
 import app.atom.praveen.databinding.ActivityRegistrationBinding
 import app.atom.praveen.dialogs.SimpleLoadingDialog
 import app.atom.praveen.models.ModelUser
@@ -19,10 +20,10 @@ import com.google.firebase.auth.FirebaseAuth
 class RegistrationActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityRegistrationBinding
-    lateinit var registrationViewModel:RegistrationViewModel
+    private lateinit var registrationViewModel:RegistrationViewModel
     private  var isGuestModeActive : Boolean=false
     private val firebaseUser = FirebaseAuth.getInstance().currentUser
-    lateinit var simpleLoadingDialog: SimpleLoadingDialog
+    private lateinit var simpleLoadingDialog: SimpleLoadingDialog
     private val TAG="RegistrationActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -108,7 +109,7 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun showLoading(message: String) {
-        Log.d(TAG,"ShowLoading : $message");
+        Log.d(TAG,"ShowLoading : $message")
         simpleLoadingDialog.show()
         simpleLoadingDialog.setMessage(message)
     }
@@ -128,7 +129,7 @@ class RegistrationActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                binding.continueFab.isEnabled = !binding.editTextName.getText().toString().isEmpty()
+                binding.continueFab.isEnabled = binding.editTextName.getText().toString().isNotEmpty()
 
             }
 

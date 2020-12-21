@@ -7,7 +7,6 @@ import app.atom.praveen.apiHelpers.FirebaseDBHelper
 import app.atom.praveen.interfaces.UserUpdateCallback
 import app.atom.praveen.models.ModelUser
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class RegistrationViewModel : ViewModel() {
 
@@ -17,7 +16,7 @@ class RegistrationViewModel : ViewModel() {
     private var firebaseUser = FirebaseAuth.getInstance().currentUser
     private val firebaseDbHelper= FirebaseDBHelper
 
-    public fun initViewModel(){
+    fun initViewModel(){
         if(modelUser==null){
             modelUser= MutableLiveData<ModelUser>()
             isLoading = MutableLiveData<Pair<Boolean,String>>()
@@ -25,7 +24,7 @@ class RegistrationViewModel : ViewModel() {
         }
     }
 
-    public fun uploadUserData(user : ModelUser){
+    fun uploadUserData(user : ModelUser){
         firebaseUser?.let {
             firebaseDbHelper.updaterUserData(it,user,object :UserUpdateCallback{
                 override fun onSuccess(user: ModelUser) {
@@ -39,17 +38,17 @@ class RegistrationViewModel : ViewModel() {
         }
     }
 
-    public fun getUserModel() : LiveData<ModelUser>?{
-        return modelUser;
+    fun getUserModel() : LiveData<ModelUser>?{
+        return modelUser
     }
 
-    public fun getIsLoading() : LiveData<Pair<Boolean,String>>?{
-        return isLoading;
+    fun getIsLoading() : LiveData<Pair<Boolean,String>>?{
+        return isLoading
     }
 
 
-    public fun getIsErrorOccurred() : LiveData<Pair<Boolean,String>>?{
-        return isErrorOccurred;
+    fun getIsErrorOccurred() : LiveData<Pair<Boolean,String>>?{
+        return isErrorOccurred
     }
 
 }
