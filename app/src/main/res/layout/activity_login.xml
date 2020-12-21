@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/illustration"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/_25dp"
+        android:layout_marginRight="@dimen/_25dp"
+        android:layout_marginTop="@dimen/_25dp"
+        android:src="@drawable/meditating_illustration"
+        app:layout_constraintBottom_toTopOf="@+id/title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:id="@+id/title_text"
+        android:text="Make meditation a habit you love"
+        app:layout_constraintStart_toStartOf="@id/continue_as_guest"
+        app:layout_constraintEnd_toEndOf="@id/continue_as_guest"
+        app:layout_constraintBottom_toTopOf="@+id/continue_with_google"
+        android:gravity="center"
+        style="@style/HeadlineTextViewStyle"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:layout_height="wrap_content"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/continue_with_google"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/LoginOptionsCardStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:background="@drawable/login_options_bg"
+        app:layout_constraintBottom_toTopOf="@id/continue_as_guest"
+        android:layout_height="@dimen/_60dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="3"
+                android:src="@drawable/google_logo"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:text="Continue with Google"
+            style="@style/LoginOptionsTextStyle"
+            android:gravity="start|center_vertical"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/continue_as_guest"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/LoginOptionsCardStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:background="@drawable/login_options_bg"
+        app:layout_constraintBottom_toTopOf="@id/terms_and_conditions_text"
+        android:layout_height="@dimen/_60dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="3"
+                android:visibility="invisible"
+                android:src="@drawable/google_logo"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            style="@style/LoginOptionsTextStyle"
+            android:text="Continue as Guest"
+            android:gravity="start|center_vertical"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/continue_as_guest"
+        app:layout_constraintStart_toStartOf="@+id/continue_as_guest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/terms_and_conditions_text"
+        android:layout_margin="@dimen/_8dp"
+        android:paddingBottom="@dimen/_10dp"
+        android:id="@+id/terms_and_conditions_text"
+        android:textSize="@dimen/very_small_text_size"
+        android:fontFamily="@font/sen_regular"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

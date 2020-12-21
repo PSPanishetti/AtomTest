@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LoginOptionsCardStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center</item>
+        <item name="background">@drawable/login_options_bg</item>
+        <item name="android:layout_marginLeft">@dimen/_25dp</item>
+        <item name="android:layout_marginRight">@dimen/_25dp</item>
+        <item name="android:layout_marginBottom">@dimen/_10dp</item>
+        <item name="fontFamily">@font/sen_regular</item>
+        <item name="android:textSize">@dimen/login_option_text_size</item>
+        <item name="android:textColor">@color/slate_grey</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LoginOptionsTextStyle" >
+        <item name="android:textColor">@color/slate_grey</item>
+        <item name="fontFamily">@font/sen_regular</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="HeadlineTextViewStyle" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/sen_extra_bold</item>
+        <item name="android:padding">@dimen/_5dp</item>
+        <item name="android:textColor">@color/title_text_color</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+</resources>
