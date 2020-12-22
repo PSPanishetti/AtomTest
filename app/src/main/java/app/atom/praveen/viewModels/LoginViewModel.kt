@@ -50,7 +50,7 @@ class LoginViewModel() : ViewModel() {
             }
 
             override fun onUserNotExists() {
-                modelUser?.value = null
+                modelUser?.value = ModelUser()
             }
 
             override fun onFailed(error: String) {
